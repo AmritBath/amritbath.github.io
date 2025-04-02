@@ -9,24 +9,26 @@
 
   <!-- Tell PyScript which Python libraries we need -->
   <py-config>
-  packages = [
-      "numpy",
-      "matplotlib",
-      "scipy"
-  ]
+    packages = [
+        "numpy",
+        "matplotlib",
+        "scipy"
+    ]
   </py-config>
 </head>
 
 <body>
   <h1>Rocket Throw Simulation</h1>
-  <p>This page lets you run the marble-throwing rocket code entirely in your browser. To start, enter a number of marbles and press the button.</p>
+  <p>
+    This page lets you run the marble-throwing rocket code entirely in your browser.
+    Enter a number of marbles, then press the button below.
+  </p>
 
   <label for="marbles_input">Number of marbles to throw:</label>
   <input id="marbles_input" type="number" value="1000" style="width: 80px;" />
-
   <button py-click="run_sim">Run Simulation</button>
 
-  <!-- Our Python code goes inside a PyScript block -->
+  <!-- The simulation & animation code goes inside one PyScript block -->
   <py-script>
 import numpy as np
 import matplotlib
@@ -125,6 +127,7 @@ def simulate_full(D, dt, R0, beta, m, u, M0, M_dry, R_threshold, tau):
     state = np.array([0.0, 0.0, M0])
     all_t, all_x, all_v, all_a, all_M = [], [], [], [], []
     while state[0] < D:
+        # If we've run out of marbles, just coast
         if state[2] <= M_dry + 1e-9:
             while state[0] < D:
                 all_t.append(t_total)
@@ -135,7 +138,11 @@ def simulate_full(D, dt, R0, beta, m, u, M0, M_dry, R_threshold, tau):
                 state[0] += state[1] * dt
                 t_total += dt
             break
-        state, t_total, t_vals, x_vals, v_vals, a_vals, M_vals = throwing_phase(state, t_total, dt, R0, beta, m, u, M_dry, R_threshold, D)
+
+        # Throwing phase
+        state, t_total, t_vals, x_vals, v_vals, a_vals, M_vals = throwing_phase(
+            state, t_total, dt, R0, beta, m, u, M_dry, R_threshold, D
+        )
         all_t.extend(t_vals)
         all_x.extend(x_vals)
         all_v.extend(v_vals)
@@ -143,7 +150,11 @@ def simulate_full(D, dt, R0, beta, m, u, M0, M_dry, R_threshold, tau):
         all_M.extend(M_vals)
         if state[0] >= D:
             break
-        state, t_total, t_vals, x_vals, v_vals, a_vals, M_vals = resting_phase(state, t_total, dt, tau, D)
+
+        # Resting phase
+        state, t_total, t_vals, x_vals, v_vals, a_vals, M_vals = resting_phase(
+            state, t_total, dt, tau, D
+        )
         all_t.extend(t_vals)
         all_x.extend(x_vals)
         all_v.extend(v_vals)
@@ -155,7 +166,7 @@ def simulate_full(D, dt, R0, beta, m, u, M0, M_dry, R_threshold, tau):
 # Rocket animation (using rocket image if found)
 # ------------------------------------------------
 def animate_rocket(distance):
-    # distance is in km, we'll just show a short range for simplicity
+    # distance is in km
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.set_xlim(0, distance)
     ax.set_ylim(-1, 1)
@@ -168,10 +179,11 @@ def animate_rocket(distance):
         space_bg = mpimg.imread("space.jpg")
         ax.imshow(space_bg, extent=[0, distance, -2, 2], aspect='auto', zorder=0)
     except:
+        # Fallback: simple black background
         ax.axhspan(-2, 2, xmin=0, xmax=1, color="black")
 
-    # Try rocket image
     ab = None
+    # Try rocket image
     try:
         rocket_img = mpimg.imread("rocket.png")
         rotated_rocket = rotate(rocket_img, -90, reshape=False)
@@ -182,7 +194,8 @@ def animate_rocket(distance):
         pass
 
     def update(frame):
-        new_x = frame * (distance / 100)  # 100 frames total
+        # 100 frames in total
+        new_x = frame * (distance / 100)
         if ab:
             ab.xybox = (new_x, 0)
         return (ab,) if ab else ()
@@ -223,7 +236,7 @@ def generate_fun_summary(total_time_sec, n_marbles):
 # Main function for PyScript
 # ------------------------------------------------
 def run_sim():
-    # Read the input from HTML
+    # Read the input from the HTML field
     marbles_value = Element("marbles_input").element.value
     try:
         n_marbles = int(marbles_value)
@@ -232,28 +245,27 @@ def run_sim():
         return
 
     # Simulation parameters
-    D = 384400000      # 384,400 km in metres, for a sense of scale
+    D = 384400000      # 384,400 km in metres
     dt = 1000          # time step
     R0 = 2.0
     beta = 0.05
     m = 0.1
     u = 50.0
     M_dry = 1000.0
-    R_threshold = 0.5  # how low the throw rate can drop before resting
-    tau = 30.0         # resting time
+    R_threshold = 0.5
+    tau = 30.0
 
-    # Compute mass and run simulation
+    # Compute initial mass with marbles
     M0 = compute_mass_from_marbles(n_marbles, m, M_dry)
     t_vals, x_vals, v_vals, a_vals, M_vals = simulate_full(D, dt, R0, beta, m, u, M0, M_dry, R_threshold, tau)
-    
+
     # Summarise results
     total_time = t_vals[-1]
     final_distance_km = x_vals[-1] / 1000.0
-
     print(f"\nTotal time taken to get home: {total_time:.2f} seconds.")
     generate_fun_summary(total_time, n_marbles)
 
-    # Show animation
+    # Show the rocket animation
     anim_html = animate_rocket(final_distance_km)
     display(anim_html)
   </py-script>
