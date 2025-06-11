@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://EuanBaldwin.github.io/sitemap.xml
