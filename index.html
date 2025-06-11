@@ -5,24 +5,36 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/katex/katex.min.css">
+        
+        <!-- KaTeX stylesheet and script -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js"
+                onload="renderMathInElement(document.body);"></script>
+        
+        <!-- Google site ownership verification -->
         <meta name="google-site-verification" content="eHmI1qKbKS6VpO3kCU5qn62_KdIt7f9gkuJyq2swO9k" />
-        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="{{ "images/favicon.png"  | absolute_url }}">
     </head>
     <body class="is-preload">
+
+        <!-- Sidebar -->
         <div id="header">
             <div class="top">
+                <!-- Logo and Name Link to Top -->
                 <a href="#top" id="logo-link">
                     <div id="logo">
                         <span class="image">
-                            <img src="images/profile.jpeg" alt="Amrit Bath" />
+                            <img src="images/profile.jpeg" alt="Euan Baldwin" />
                         </span>
-                        <h1 id="title">Amrit Bath</h1>
-                        <p>Physics BSc | Digital Fashion & AI</p>
+                        <h1 id="title">Euan Baldwin</h1>
+                        <p>Robotics MSc</p>
                     </div>
                 </a>
+        
+                <!-- Nav -->
                 <nav id="nav">
                     <ul>
                         <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
@@ -32,16 +44,23 @@
                     </ul>
                 </nav>
             </div>
+        
             <div class="bottom">
+                <!-- Social Icons -->
                 <ul class="icons">
-                    <li><a href="Amrit Bath CV.pdf" class="icon solid fa-file"><span class="label">CV</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/amrit-bath-717131247/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="mailto:ami.k.bath@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    <li><a href="CV - 23.10.24.pdf" class="icon solid fa-file"><span class="label">Curriculum Vitae</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/euan-baldwin-643416231/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/EuanBaldwin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:euanebaldwin@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                 </ul>
             </div>
         </div>
 
+
+        <!-- Main -->
         <div id="main">
+
+            <!-- Intro -->
             <section id="top" class="one dark cover">
                 <div class="container">
                     <header>
@@ -53,29 +72,299 @@
                 </div>
             </section>
 
+            <!-- About Me -->
             <section id="about" class="three">
                 <div class="container">
-                    <header><h2>About Me</h2></header>
-                    <p>
-                        I'm a Physics undergraduate at the University of Manchester, working at the intersection of science, design, and technology. My interests lie in digital fashion, generative AI, and inclusive education. I've published on AI in fashion, co-developed curriculum reforms for accessibility, and led a national finalist pitch for L'Oréal Brandstorm. My work blends computational and creative thinking to reimagine how we build and learn.
-                    </p>
-                    <header><h2>Career Objectives & Research Interests</h2></header>
-                    <p>
-                        I'm motivated by meaningful innovation, particularly where ethics, design, and data converge. I aim to work in spaces where technology is used to empower, not exclude—with special focus on accessibility, sustainability, and AI literacy.
-                    </p>
+<header>
+    <h2>About Me</h2>
+</header>
+<p>
+I'm a Physics undergraduate at the University of Manchester, working at the intersection of science, design, and technology. My interests lie in digital fashion, generative AI, and inclusive education. I've published on AI in fashion, co-developed curriculum reforms for accessibility, and led a national finalist pitch for L'Oréal Brandstorm. My work blends computational and creative thinking to reimagine how we build and learn.
+</p>
+<header>
+    <h2>Career Objectives & Research Interests</h2>
+</header>
+<p>
+    I'm motivated by meaningful innovation, particularly where ethics, design, and data converge. I aim to work in spaces where technology is used to empower, not exclude—with special focus on accessibility, sustainability, and AI literacy.
+</p>
                 </div>
             </section>
 
-            <!-- The Skills and Portfolio sections can be adapted or retained similarly -->
+
+            <!-- Skills Section -->
+            <section id="skills" class="two">
+                <div class="container">
+                    <header>
+                        <h2>Technical Skills</h2>
+                    </header>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Python</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">C++</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">ROS2</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">\( \LaTeX \)</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">HTML/CSS</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">Data Visualisation</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Version Control</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">GNU/Linux</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Jupyter Notebooks</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">VS Code</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <header>
+                        </br>
+                        <h2>Personal Skills</h2>
+                    </header>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Initiative</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">Problem Solving</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Communication</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">Adaptability</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Teamwork & Collaboration</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">Project Management & Organisation</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skill-container">
+                            <div class="skill-title">Attention to Detail</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <div class="skill-title">Resilience</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <!-- Portfolio -->
+            <section id="portfolio" class="three">
+                <div class="container">
+                    <header>
+                        <h2>Portfolio</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-4 col-12-mobile">
+                            <article class="item">
+                                <a href="portfolio/sdg_project.html" class="image fit">
+                                    <img src="images/sdgs.png" alt="SDG Project" />
+                                </a>
+                                <header>
+                                    <h3>Robotic Systems & Sustainable Development</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="https://github.com/EuanBaldwin/cpp-course/blob/main/project-particle-catalogue-EuanBaldwin/report.pdf" class="image fit">
+                                    <img src="images/particles.png" alt="Particle Zoo" />
+                                </a>
+                                <header>
+                                    <h3>Particle Catalogue in CPP</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="portfolio/nea.html" class="image fit">
+                                    <img src="images/nea_image.png" alt="Percieved Likelihood of Dying from COVID-19 Chart" />
+                                </a>
+                                <header>
+                                    <h3>The Impact of Deprivation on the Perception of COVID-19 in London</h3>
+                                </header>
+                            </article>
+                        </div>
+                        <div class="col-4 col-12-mobile">
+                            <article class="item">
+                                <a href="portfolio/lhcb.html" class="image fit">
+                                    <img src="images/lhcb_image.png" alt="Matter-Antimatter Asymmetry Plot" />
+                                </a>
+                                <header>
+                                    <h3>Measuring Matter Antimatter Asymmetries at the LHC</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="https://github.com/EuanBaldwin/AMR_assignment_2" class="image fit">
+                                    <img src="images/path_planner.png" alt="Path Planning Example" />
+                                </a>
+                                <header>
+                                    <h3>A* Path Planner</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="portfolio/sensor_characterisation.html" class="image fit">
+                                    <img src="images/a2m12_lidar.jpeg" alt="A2M12 Lidar" />
+                                </a>
+                                <header>
+                                    <h3>Sensor Characterisation: A2M12 Lidar</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="https://github.com/EuanBaldwin/computational-physics/blob/main/project3_10818421.ipynb" class="image fit">
+                                    <img src="images/neutron_scattering.jpeg" alt="Neutron Scattering Simulation" />
+                                </a>
+                                <header>
+                                    <h3>Neutron Scattering Simulation</h3>
+                                </header>
+                            </article>
+                        </div>
+                        <div class="col-4 col-12-mobile">
+                            <article class="item">
+                                <a href="https://github.com/MahirPokar/Autonomous-search-and-retrieval-robot-project" class="image fit">
+                                    <img src="images/robot.jpeg" alt="LEO Rover" />
+                                </a>
+                                <header>
+                                    <h3>Autonomous Search and Retrieval Robot</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="portfolio/dia_microlensing.html" class="image fit">
+                                    <img src="images/telescope.avif" alt="Telescope" />
+                                </a>
+                                <header>
+                                    <h3>DIA & Gravitational Microlensing</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="portfolio/epq.html" class="image fit">
+                                    <img src="images/gender_inequality.jpg" alt="Gender Inequality" />
+                                </a>
+                                <header>
+                                    <h3>Gender Inequality in Physics Report</h3>
+                                </header>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
+        <!-- Footer -->
         <div id="footer">
             <ul class="copyright">
-                <li>&copy; Amrit Bath 2025. All rights reserved.</li>
+                <li>&copy; Euan Baldwin 2024. All rights reserved.</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
 
-        <script src="assets/js/bundle.min.js"></script>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
