@@ -36,6 +36,7 @@ html {
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	color: var(--primary-accent);
 }
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -43,6 +44,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	color: var(--secondary-accent);
 }
 
 ol, ul {
@@ -68,7 +70,7 @@ body {
 }
 
 mark {
-	background-color: transparent;
+	background-color: #e2d8cf;
 	color: inherit;
 }
 
@@ -100,7 +102,7 @@ input, select, textarea {
     font-size: 19pt;
     font-weight: 300;
     line-height: 1.75em;
-    color: #555; /* Slightly darker than #888 for contrast */
+    color: var(--primary-accent); /* Slightly darker than #888 for contrast */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -119,12 +121,12 @@ input, select, textarea {
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: var(--secondary-accent);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
+		color: var(--primary-accent);
 		line-height: 1.5em;
 	}
 
@@ -134,7 +136,7 @@ input, select, textarea {
 	}
 
 		h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
-			color: #333;
+			color: var(--primary-accent);
 		}
 
 	h2 {
@@ -143,11 +145,11 @@ input, select, textarea {
 	}
 
 		h2.alt {
-			color: #888;
+			color: var(--secondary-accent);
 		}
 
 			h2.alt strong {
-				color: #666;
+				color: var(--primary-accent);
 			}
 
 	h3 {
@@ -168,7 +170,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 300;
-		color: #666;
+		color: var(--primary-accent);
 	}
 
 	em, i {
@@ -206,11 +208,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px var(--light-accent);
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em var(--light-accent);
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1882,8 +1884,8 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			box-shadow: 0 0 2px 1px #8ebebc;
-			background: #fff;
+			box-shadow: 0 0 2px 1px var(--primary-accent);
+			background: var(--very-light-bg);
 		}
 
 	form input[type="text"],
@@ -1925,7 +1927,7 @@ input, select, textarea {
 	}
 
 		table tbody tr:nth-child(2n+2) {
-			background: #f4f4f4;
+			background: var(--very-light-bg);
 		}
 
 		table td {
@@ -1979,7 +1981,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #9ececc;
+			background-color: var(--light-accent);
 		}
 
 		input[type="button"]:active,
@@ -1987,7 +1989,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #7eaeac;
+			background-color: var(--light-accent);
 		}
 
 /* Item */
@@ -2182,7 +2184,7 @@ input, select, textarea {
 }
 			
 					#nav ul li a.active span:before {
-						color: #e27689;
+						color: var(--secondary-accent);
 					}
 
 /* Footer */
