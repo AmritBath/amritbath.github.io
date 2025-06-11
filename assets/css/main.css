@@ -2002,7 +2002,7 @@ input, select, textarea {
 		.item #header {
     background: var(--primary-accent) url("images/overlay.png");
     box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: var(--primary-accent);
 }
 
 
@@ -2063,7 +2063,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background: var(--very-light-bg) url("images/overlay.png");
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		color: #fff;
+		color: var(--primary-accent);
 		height: 100%;
 		left: 0;
 		overflow-y: auto;
