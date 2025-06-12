@@ -2128,7 +2128,7 @@ input, select, textarea {
 			position: relative;
 			display: block;
 			font-size: 0.6em;
-			color: rgba(255, 255, 255, 0.5);
+			color: var(--primary-accent);
 			line-height: 1.25em;
 			margin: 0.5em 0 0 0;
 		}
