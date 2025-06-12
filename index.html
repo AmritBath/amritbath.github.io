@@ -15,47 +15,20 @@
         <!-- Google site ownership verification -->
         <meta name="google-site-verification" content="eHmI1qKbKS6VpO3kCU5qn62_KdIt7f9gkuJyq2swO9k" />
 
-        <!-- Favicon -->
+ <!-- Favicon -->
         <link rel="shortcut icon" type="image/png" href="{{ "images/favicon.png"  | absolute_url }}">
     </head>
     <body class="is-preload">
 
         <!-- Sidebar -->
-        <div id="header">
-            <div class="top">
-                <!-- Logo and Name Link to Top -->
-                <a href="#top" id="logo-link">
-                    <div id="logo">
-                        <span class="image">
-                            <img src="images/profile.jpeg" alt="Amrit Bath" />
-                        </span>
-                        <h1 id="title">Amrit Bath</h1>
-                        <p>Physics BSc Graduate</p>
-                    </div>
-                </a>
-        
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                        <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                        <li><a href="#skills" id="skills-link"><span class="icon solid fa-award">Skills</span></a></li>
-                        <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        
-            <div class="bottom">
-                <!-- Social Icons -->
-                <ul class="icons">
-                    <li><a href="Amrit Bath CV.pdf" class="icon solid fa-file"><span class="label">Curriculum Vitae</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/amrit-bath-717131247/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/AmritBath" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="mailto:ami.k.bath@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
-            </div>
-        </div>
-
+        <div id="header"></div>
+        <script>
+        fetch('/sidebar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+        </script>
 
         <!-- Main -->
         <div id="main">
