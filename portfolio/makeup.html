@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makeup Portfolio</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .portfolio-description {
+      max-width: 800px;
+      margin: 0 auto 2em;
+      text-align: center;
+    }
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .image-grid img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <div id="header"></div>
+  <script>
+    fetch('/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <div id="main">
+    <section class="three">
+      <div class="container">
+        <header><h2>Makeup Portfolio</h2></header>
+
+        <div class="portfolio-description">
+          <p>
+            My makeup artistry draws from bold, conceptual briefs—think <em>Glow Up</em> meets editorial creativity. I specialise in vibrant, experimental looks that fuse colour theory, character design, and statement styling. Whether on set or for self-directed shoots, I aim to create transformative, camera-ready results with personality.
+          </p>
+          <p>
+            Below is a selection of my work. All makeup is done by me, from design to application, often alongside creative direction or costume styling.
+          </p>
+        </div>
+
+        <div class="image-grid">
+          <img src="../assets/images/makeup/1.jpeg" alt="Makeup look 1">
+          <img src="../assets/images/makeup/3.jpeg" alt="Makeup look 3">
+          <img src="../assets/images/makeup/4.jpeg" alt="Makeup look 4">
+          <img src="../assets/images/makeup/5.jpeg" alt="Makeup look 5">
+          <img src="../assets/images/makeup/6.jpeg" alt="Makeup look 6">
+          <img src="../assets/images/makeup/7.jpeg" alt="Makeup look 7">
+          <img src="../assets/images/makeup/8.jpeg" alt="Makeup look 8">
+          <img src="../assets/images/makeup/9.jpeg" alt="Makeup look 9">
+          <img src="../assets/images/makeup/10.jpeg" alt="Makeup look 10">
+          <img src="../assets/images/makeup/11.jpeg" alt="Makeup look 11">
+          <img src="../assets/images/makeup/12.jpeg" alt="Makeup look 12">
+          <img src="../assets/images/makeup/13.jpeg" alt="Makeup look 13">
+          <img src="../assets/images/makeup/14.jpg" alt="Makeup look 14">
+          <img src="../assets/images/makeup/15.jpeg" alt="Makeup look 15">
+          <img src="../assets/images/makeup/16.jpeg" alt="Makeup look 16">
+          <img src="../assets/images/makeup/17.jpeg" alt="Makeup look 17">
+          <img src="../assets/images/makeup/18.jpeg" alt="Makeup look 18">
+          <img src="../assets/images/makeup/19.jpeg" alt="Makeup look 19">
+          <img src="../assets/images/makeup/20.jpeg" alt="Makeup look 20">
+          <img src="../assets/images/makeup/21.jpeg" alt="Makeup look 21">
+          <img src="../assets/images/makeup/22.jpeg" alt="Makeup look 22">
+          <img src="../assets/images/makeup/23.jpg" alt="Makeup look 23">
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
