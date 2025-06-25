@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Programming</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+
+  <div id="header"></div>
+  <script>
+  fetch('/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+  </script>
+
+  <div id="main">
+    <section class="three">
+      <div class="container">
+        <header><h2>Introduction to Programming</h2></header>
+
+        <p>
+          This course gave me a solid foundation in Python, using the Anaconda distribution and the Spyder IDE. I learned how to write and debug Python scripts, apply basic algorithmic thinking, and use programming to solve real-world problems in science and data analysis.
+        </p>
+
+        <p>
+          Through hands-on assignments, I developed skills in control flow, functions, data structures, and plotting with libraries like Matplotlib. These early coding experiences laid the groundwork for my later work in scientific computing and automation.
+        </p>
+
+        <p>
+          You can view two of my Python projects from the course below:
+        </p>
+
+        <ul>
+          <li><a href="https://github.com/AmritBath/Intro-To-Programming/blob/main/Intro%20To%20Programming%20Project%201.py" target="_blank">Project 1</a></li>
+          <li><a href="https://github.com/AmritBath/Intro-To-Programming/blob/main/assignment_2.py" target="_blank">Project 2</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

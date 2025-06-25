@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computational Physics</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+
+  <div id="header"></div>
+  <script>
+  fetch('/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+  </script>
+
+  <div id="main">
+    <section class="three">
+      <div class="container">
+        <header><h2>Computational Physics</h2></header>
+
+        <p>
+          This module introduced me to numerical modelling and scientific computing through Jupyter Notebooks and Python-based simulations. We explored physical systems ranging from planetary motion to diffusion and wave dynamics, using code to visualise and analyse their behaviour.
+        </p>
+
+        <p>
+          It deepened my confidence with scripting, data visualisation, and iterative problem solving—skills I now apply in both academic and personal projects.
+        </p>
+
+        <p>
+          You can explore two of my computational physics projects on GitHub below:
+        </p>
+
+        <ul>
+          <li><1 href="https://github.com/AmritBath/Computational-Physics-Project-2/blob/main/Project%201.ipynb" target="_blank">Project 1</a></li>
+          <li><a href="https://github.com/AmritBath/Computational-Physics-Project-2/blob/main/Computational%20Physics%20Project%202.py" target="_blank">Project 2</a></li>
+          <li>Project 3 currently unavailable due to Manchester's local Jupyter server shutdown</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
