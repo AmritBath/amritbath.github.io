@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’Oréal Brandstorm: GroomGenius</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+
+  <div id="header"></div>
+  <script>
+  fetch('/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+  </script>
+
+  <div id="main">
+    <section class="three">
+      <div class="container">
+        <header><h2>L’Oréal Brandstorm: GroomGenius</h2></header>
+
+        <p>
+          For the 2025 L’Oréal Brandstorm competition, our team tackled the underdeveloped men’s skincare market by creating <strong>GroomGenius</strong> — an AI- and AR-powered mobile experience that empowers men to take control of their grooming with personalised, science-backed support.
+        </p>
+
+        <p>
+          We discovered that many men don't prioritise skincare due to a lack of education, confidence, and visibility in the beauty space. Our solution? A digital-first grooming companion that diagnoses skin and beard needs through a selfie scan, previews styling results in AR, and gamifies routines through micro-tutorials and rewards.
+        </p>
+
+        <p>
+          GroomGenius is designed to be <em>inclusive</em>, <em>sustainable</em>, and <em>globally scalable</em>—a platform where men are no longer an afterthought but a core beauty audience. It leverages L’Oréal’s existing AI technologies (like Skin Genius) and connects grooming to self-confidence and mental health through education and community.
+        </p>
+
+        <p>
+          Our cross-disciplinary team blended fashion, physics, and computer science to create a practical yet visionary solution. From research and stakeholder interviews to design, video production, and pitch delivery—we collaborated closely with industry mentors and user voices throughout.
+        </p>
+
+        <p>Explore our submission:</p>
+        <ul>
+          <iframe src="Compressed Video.mp4" style="width: 100%; height: 100vh; border: none;"></iframe>
+          <iframe src="Final Slides.pdf" style="width: 100%; height: 100vh; border: none;"></iframe>
+        </ul>
+
+        <h3>Photos and Visuals</h3>
+        <div class="gallery">
+          <img src="../images/groomgenius/1.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+          <img src="../images/groomgenius/3.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+          <img src="../images/groomgenius/4.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+          <img src="../images/groomgenius/5.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+          <img src="../images/groomgenius/6.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+          <img src="../images/groomgenius/7.jpg" style="width:100%; max-width:400px; margin: 10px;" />
+        </div>
+    </section>
+  </div>
+</body>
+</html>
