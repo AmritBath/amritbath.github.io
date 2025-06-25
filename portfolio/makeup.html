@@ -6,29 +6,42 @@
   <title>Makeup Portfolio</title>
   <link rel="stylesheet" href="../assets/css/main.css" />
   <style>
-    .portfolio-description {
-      max-width: 800px;
-      margin: 0 auto 2em;
-      text-align: center;
-    }
-    .image-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .image-grid img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .image-grid img:hover {
-      transform: scale(1.03);
-    }
+  .portfolio-description {
+    max-width: 800px;
+    margin: 0 auto 2em;
+    text-align: center;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .image-grid img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .image-grid img:hover {
+    transform: scale(1.02);
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
   </style>
 </head>
 <body class="is-preload">
@@ -57,29 +70,29 @@
         </div>
 
         <div class="image-grid">
-          <img src="../images/makeup/1.jpeg" alt="Makeup look 1">
-          <img src="../images/makeup/2.heic" alt="Makeup look 1">
-          <img src="../images/makeup/3.jpeg" alt="Makeup look 3">
-          <img src="../images/makeup/4.jpeg" alt="Makeup look 4">
-          <img src="../images/makeup/5.jpeg" alt="Makeup look 5">
-          <img src="../images/makeup/6.jpg" alt="Makeup look 6">
-          <img src="../images/makeup/7.jpeg" alt="Makeup look 7">
-          <img src="../images/makeup/8.jpeg" alt="Makeup look 8">
-          <img src="../images/makeup/9.jpeg" alt="Makeup look 9">
-          <img src="../images/makeup/10.jpeg" alt="Makeup look 10">
-          <img src="../images/makeup/11.jpeg" alt="Makeup look 11">
-          <img src="../images/makeup/12.jpeg" alt="Makeup look 12">
-          <img src="../images/makeup/13.jpg" alt="Makeup look 13">
-          <img src="../images/makeup/14.jpg" alt="Makeup look 14">
-          <img src="../images/makeup/15.jpg" alt="Makeup look 15">
-          <img src="../images/makeup/16.jpg" alt="Makeup look 16">
-          <img src="../images/makeup/17.jpg" alt="Makeup look 17">
-          <img src="../images/makeup/18.jpg" alt="Makeup look 18">
-          <img src="../images/makeup/19.jpg" alt="Makeup look 19">
-          <img src="../images/makeup/20.jpg" alt="Makeup look 20">
-          <img src="../images/makeup/21.jpg" alt="Makeup look 21">
-          <img src="../images/makeup/22.jpg" alt="Makeup look 22">
-          <img src="../images/makeup/23.jpg" alt="Makeup look 23">
+          <div class="image-wrapper"></div><img src="../images/makeup/1.jpeg" alt="Makeup look 1">
+          <div class="image-wrapper"></div><img src="../images/makeup/2.heic" alt="Makeup look 1">
+          <div class="image-wrapper"></div><img src="../images/makeup/3.jpeg" alt="Makeup look 3">
+          <div class="image-wrapper"></div><img src="../images/makeup/4.jpeg" alt="Makeup look 4">
+          <div class="image-wrapper"></div><img src="../images/makeup/5.jpeg" alt="Makeup look 5">
+          <div class="image-wrapper"></div><img src="../images/makeup/6.jpg" alt="Makeup look 6">
+          <div class="image-wrapper"></div><img src="../images/makeup/7.jpeg" alt="Makeup look 7">
+          <div class="image-wrapper"></div><img src="../images/makeup/8.jpeg" alt="Makeup look 8">
+          <div class="image-wrapper"></div><img src="../images/makeup/9.jpeg" alt="Makeup look 9">
+          <div class="image-wrapper"></div><img src="../images/makeup/10.jpeg" alt="Makeup look 10">
+          <div class="image-wrapper"></div><img src="../images/makeup/11.jpeg" alt="Makeup look 11">
+          <div class="image-wrapper"></div><img src="../images/makeup/12.jpeg" alt="Makeup look 12">
+          <div class="image-wrapper"></div><img src="../images/makeup/13.jpg" alt="Makeup look 13">
+          <div class="image-wrapper"></div><img src="../images/makeup/14.jpg" alt="Makeup look 14">
+          <div class="image-wrapper"></div><img src="../images/makeup/15.jpg" alt="Makeup look 15">
+          <div class="image-wrapper"></div><img src="../images/makeup/16.jpg" alt="Makeup look 16">
+          <div class="image-wrapper"></div><img src="../images/makeup/17.jpg" alt="Makeup look 17">
+          <div class="image-wrapper"></div><img src="../images/makeup/18.jpg" alt="Makeup look 18">
+          <div class="image-wrapper"></div><img src="../images/makeup/19.jpg" alt="Makeup look 19">
+          <div class="image-wrapper"></div><img src="../images/makeup/20.jpg" alt="Makeup look 20">
+          <div class="image-wrapper"></div><img src="../images/makeup/21.jpg" alt="Makeup look 21">
+          <div class="image-wrapper"></div><img src="../images/makeup/22.jpg" alt="Makeup look 22">
+          <div class="image-wrapper"></div><img src="../images/makeup/23.jpg" alt="Makeup look 23">
         </div>
       </div>
     </section>
